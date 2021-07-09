@@ -1,0 +1,313 @@
+  /* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+/* section{
+  display: grid;
+  place-items: center;
+} */
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+#subSection{
+  float: left;
+  color: #46322c;
+  background-color:rgb(184, 237, 255);
+  height: 725px;
+  width: 44%;
+  box-shadow: 0px 0px 25px 0px rgba(128, 139, 139, 1);
+
+}
+
+#leftSide{
+  background-image: url("https://fur-babies.pet/wp-content/uploads/paw-print-background.jpg");
+  background-position:top;
+  background-position:left;
+  float: left;
+  width: 56%;
+  height: 725px;
+}
+
+#leftSide > img{
+  margin: 10% 25% 80% 25%;
+}
+
+ #topLogo{
+   margin-top: -3%;
+   width: 40%;
+}
+
+h1{
+  font-size: 3.5em;
+  padding-top: 20%;
+}
+
+#subSection > h1 + span {
+  font-size: 1.2em;
+}
+
+button {
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  box-shadow: 5px 5px 5px #ff767c;
+  border: 1px solid rgb(255, 255, 255);
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 5%;
+  border-radius: 25px;
+  padding: 1.5% ;
+  width: 13em;
+}
+
+button:hover {
+  box-shadow: 1px 1px 25px 10px rgb(133, 207, 231);
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    #ff767c,
+    transparent
+  );
+  transition: all 650ms;
+}
+
+button:hover:before {
+  left: 100%;
+}
+.signup{
+  color: white;
+  margin-top: 2%;
+  text-align: center;
+  background: #ff767c;
+  border-color: #ff767c;
+  box-shadow: 5px 5px 5px white;
+}
+
+.signup:before {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    white,
+    transparent
+  );
+
+}
+
+.shelter .login{
+  margin-top: 5%;
+}
+
+
+@media screen and (max-width:1440px) {
+  #leftSide {
+    height: 747px;
+
+  }
+  
+  #leftSide > img {
+      width: 30em;
+      margin: 0 auto;
+     margin-left: 20%;
+     margin-top: 15%; 
+  }
+
+  #subSection{
+    height:747px;
+  }
+
+
+  .button{
+    width: 10em;
+  }
+
+}
+
+@media screen and (max-width:1024px) {
+  #leftSide {
+    background-position: right;
+  }
+  
+  #leftSide > img {
+     width: 25em;
+     margin: 0 auto;
+     margin-left: 15%;
+     margin-top: 12%;   
+  }
+
+  .button{
+    width: 12em;
+    padding: 2.5%;
+    margin-top: 5%
+  }
+  .login{
+    margin-top: 15%;
+  }
+  .shelter{
+    margin-top: 5%;
+  }
+}
+
+
+
+@media screen and (max-width:768px) {
+  #leftSide {
+    background-position: right;
+  }
+  
+  #leftSide > img {
+     width: 23em;
+     margin: 0 auto;
+     margin-left: 5%;
+     margin-top: 19%;
+      
+  }
+
+  .button{
+    width: 10em;
+  }
+
+  h1{
+    font-size: 3em;
+  }
+  /* span {
+    margin-left: 10%;
+    margin-right: 10%;
+  } */
+
+  .button{
+    width: 12em;
+    margin-top: 5%;
+    padding: 3% ;
+  }
+  .login{
+    margin-top: 20%;
+  }
+  .shelter{
+    margin-top: 5%;
+  }
+}
+
+@media screen and (max-width:426px) {
+  #leftSide {
+    background-position: right;
+    float: left;
+    height: 250px;
+    width: 100%;
+  }
+  
+  #leftSide > img {
+    margin: 0 auto;
+    margin-top: -5%;
+    margin-left: 10%;
+    width: 20em;
+  }
+  #subSection{
+    float: left;
+    height: 400px;
+    width: 100%;
+
+  }
+
+  #topLogo{
+    display: none;
+  }
+
+  h1{
+    margin-top: -15%;
+    font-size: 2.5em;
+  }
+
+  .button{
+    margin-bottom: 5%;
+
+  }
+
+  .login{
+    margin-top: 5%;
+  }
+}
+
+@media screen and (max-width:320px) {
+    #leftSide {
+      background-position: right;
+      float: left;
+      height: 250px;
+      width: 100%;
+    }
+    
+    #leftSide > img {
+      margin: 0 auto;
+      margin-top: -10%;
+      width: 20em;
+    }
+    #subSection{
+      float: left;
+      font-size: 1em;
+      height: 400px;
+      width: 100%;
+
+    }
+
+    #topLogo{
+      display: none;
+    }
+
+    h1{
+      margin-top: -15%;
+      font-size: 2.5em;
+    }
+
+    .button{
+      margin-bottom: 5%;
+      margin-top: 2%;
+    }
+}
+  
+  
+  
